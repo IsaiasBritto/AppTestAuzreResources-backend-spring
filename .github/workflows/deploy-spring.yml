@@ -1,4 +1,5 @@
-name: Build & Deploy Spring to Azure App Service (OIDC)
+﻿name: Build & Deploy Spring to Azure App Service (OIDC)
+
 on:
   push:
     branches: [ main ]
@@ -13,6 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # Garante que o wrapper funciona no Linux
+      - name: Make mvnw executable (and fix CRLF if any)
+        run: |
+          if [ -f mvnw ]; then
+            sed -i 's/\r$//' mvnw
+            chmod +x mvnw
+          fi
 
       - uses: actions/setup-java@v4
         with:
