@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+google:
+  oauth:
+    clientId: ${GOOGLE_OAUTH_CLIENTID}
+
+app:
+  jwt:
+    secret: ${APP_JWT_SECRET}
+
+azure:
+  openai:
+    endpoint: ${AZURE_OPENAI_ENDPOINT}
+    key: ${AZURE_OPENAI_KEY}
+    deployment: ${AZURE_OPENAI_DEPLOYMENT}
+    apiVersion: ${AZURE_OPENAI_API_VERSION}
+  vision:
+    endpoint: ${AZURE_VISION_ENDPOINT}
+    key: ${AZURE_VISION_KEY}
+  face:
+    endpoint: ${AZURE_FACE_ENDPOINT}
+    key: ${AZURE_FACE_KEY}
+  speech:
+    region: ${AZURE_SPEECH_REGION}
+    key: ${AZURE_SPEECH_KEY}
+  docintel:
+    endpoint: ${AZURE_DOCINTEL_ENDPOINT}
+    key: ${AZURE_DOCINTEL_KEY}
