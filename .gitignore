@@ -3,5 +3,4 @@
 *.iml
 *.log
 .mvn/wrapper/maven-wrapper.jar
-# env local (se tiver)
 .env
