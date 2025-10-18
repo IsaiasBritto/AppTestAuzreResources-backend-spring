@@ -3,7 +3,7 @@ server:
 
 google:
   oauth:
-    clientId: ${GOOGLE_OAUTH_CLIENTID}
+    clientId: ${GOOGLE_CLIENT_ID}
 
 app:
   jwt:
