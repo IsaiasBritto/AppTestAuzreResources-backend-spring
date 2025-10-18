@@ -1,4 +1,4 @@
-package com.example.backend.security;
+package com.example.auth.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +13,7 @@ public class SecurityConfig {
     http
       .csrf(csrf -> csrf.disable())
       .authorizeHttpRequests(auth -> auth
-        .requestMatchers("/health", "/ai/**").permitAll() // libere o que quiser
+        .requestMatchers("/health", "/ai/**").permitAll()
         .anyRequest().authenticated()
       )
       .httpBasic(basic -> basic.disable())
